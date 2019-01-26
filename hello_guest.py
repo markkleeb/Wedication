@@ -62,33 +62,33 @@ def hello_guest():
     guest_acceptance = wks_attendees.acell('C260').value
     
     #meal total variables
-    guest_meals_confirmed = wks_attendees.acell('C261').value 
-    guest_meals_unconfirmed = wks_attendees.acell('262').value
+    #guest_meals_confirmed = wks_attendees.acell('C261').value 
+    #guest_meals_unconfirmed = wks_attendees.acell('262').value
     
     #meal options (name/amount)
-    starter_option_1 = wks_food.acell('G2').value
-    starter_option_1_amount = wks_food.acell('H2').value
+    #starter_option_1 = wks_food.acell('G2').value
+    #starter_option_1_amount = wks_food.acell('H2').value
     
-    starter_option_2 = wks_food.acell('G3').value
-    starter_option_2_amount = wks_food.acell('H3').value
+    #starter_option_2 = wks_food.acell('G3').value
+    #starter_option_2_amount = wks_food.acell('H3').value
 
-    starter_option_3 = wks_food.acell('G4').value
-    starter_option_3_amount = wks_food.acell('H4').value
+    #starter_option_3 = wks_food.acell('G4').value
+    #starter_option_3_amount = wks_food.acell('H4').value
     
-    main_option_1 = wks_food.acell('G5').value
-    main_option_1_amount = wks_food.acell('H5').value
+    #main_option_1 = wks_food.acell('G5').value
+    #main_option_1_amount = wks_food.acell('H5').value
     
-    main_option_2 = wks_food.acell('G6').value
-    main_option_2_amount = wks_food.acell('H6').value
+    #main_option_2 = wks_food.acell('G6').value
+    #main_option_2_amount = wks_food.acell('H6').value
     
-    main_option_3 = wks_food.acell('G7').value
-    main_option_3_amount = wks_food.acell('H7').value
+    #main_option_3 = wks_food.acell('G7').value
+    #main_option_3_amount = wks_food.acell('H7').value
     
-    dessert_option_1 = wks_food.acell('G8').value
-    dessert_option_1_amount = wks_food.acell('H8').value
+    #dessert_option_1 = wks_food.acell('G8').value
+    #dessert_option_1_amount = wks_food.acell('H8').value
     
-    dessert_option_2 = wks_food.acell('G9').value
-    dessert_option_2_amount = wks_food.acell('H9').value
+    #dessert_option_2 = wks_food.acell('G9').value
+    #dessert_option_2_amount = wks_food.acell('H9').value
 
     guest_confirmation_cell = wks_attendees.find(str(clean_number).strip()) 
     
