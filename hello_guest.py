@@ -51,7 +51,7 @@ def hello_guest():
     from_body = request.values.get('Body', None)
     number = from_number
     body_strip = from_body.lower()
-    clean_number = number.strip("+1")
+    clean_number = number.strip("+")
     
     #all of these values depend on how many guests are at your wedding
 
