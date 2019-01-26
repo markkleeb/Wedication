@@ -95,8 +95,8 @@ def hello_guest():
     if "yes" in from_body.lower(): 
         #We have a keeper! Find the attendee and update their confirmation_status
         wks_attendees.update_acell("F" + str(guest_confirmation_cell.row), 'Accepted') #update the status to accepted for that guest
-        #resp.message(u"\u2665" + "Thanks! We can't wait to see you. More information will be on the way soon! " + u"\u2665")  #respond to the guest with a confirmation! 
-        resp.message("Thanks! We can't wait to see you. More information will be on the way soon!")  #respond to the guest with a confirmation! 
+        resp.message(u"\u2665" + "Thanks! We can't wait to see you. More information will be on the way soon! " + u"\u2665")  #respond to the guest with a confirmation! 
+        #resp.message("Thanks! We can't wait to see you. More information will be on the way soon!")  #respond to the guest with a confirmation! 
 
     elif "no" in from_body.lower(): #no! 
        #update the confirmation_status row to declined for that guest
