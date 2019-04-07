@@ -16,7 +16,7 @@ scope = ['https://spreadsheets.google.com/feeds',
 credentials = ServiceAccountCredentials.from_json_keyfile_name('client_secret.json', scope)
 #credentials = SignedJwtAssertionCredentials(json_key['client_email'], json_key['private_key'].encode(), scope)
 gc = gspread.authorize(credentials)
-wks = gc.open("GREEBLIST_TEST") #add your workbook name here
+wks = gc.open("GREEBLIST") #add your workbook name here
 wks_attendees = wks.get_worksheet(0) #attendees worksheet
 wks_food = wks.get_worksheet(1) #food responses worksheet
 
