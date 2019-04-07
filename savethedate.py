@@ -1,3 +1,4 @@
+
 # -*- coding: UTF-8 -*-
 import json
 import time
@@ -13,7 +14,7 @@ scope = ['https://spreadsheets.google.com/feeds',
          'https://www.googleapis.com/auth/drive']
 credentials = ServiceAccountCredentials.from_json_keyfile_name('client_secret.json', scope)
 gc = gspread.authorize(credentials)
-wks = gc.open("GREEBLIST_TEST") #add your workbook name here
+wks = gc.open("GREEBLIST") #add your workbook name here
 wks_attendees = wks.get_worksheet(0) #attendees worksheet
 
 ACCOUNT_SID = os.environ['TWILIO_ACCOUNT_SID']
@@ -28,7 +29,7 @@ for num in range(2,60):  #to iterate between guests, amend this based on your to
     guest_number = wks_attendees.acell('B' +str(num)).value
     guest_name = wks_attendees.acell('A'+str(num)).value
     
-    if not  guest_number:
+    if not guest_number:
         print (guest_name + ' telephone number empty not messaging')
         wks_attendees.update_acell('E'+str(num), '0') #set number to 0
     

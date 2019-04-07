@@ -124,7 +124,7 @@ def hello_guest():
         + ": " + dessert_option_2_amount)
 
     else: #respond with invalid keyword
-        resp.message("You sent a different keyword, we need a yes or a no, you sent: " +
+        resp.message("I am Steph and Mark's wedding robot, and do not understand what you said. We need a yes or a no, you sent: " +
         from_body)
     return str(resp)
  
