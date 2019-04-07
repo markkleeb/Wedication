@@ -1,2 +1,0 @@
-export TW_SID="ACf540e9c22c3e93d6bbd74c0af36b5c2d"
-export TW_TKN="5ce7b32f70cd243c03bf9cdb14df3dda"
