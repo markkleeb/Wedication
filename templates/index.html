@@ -85,7 +85,7 @@
    
     </div>-->
             <nav class="char-nav2 grey-border">
-     <img class="imgretro" src="static/img/halloween.png" width="350px"> 
+     <img class="imgretro" src="static/img/halloween.png" width="500px"> 
  </nav>
 
             
@@ -122,18 +122,40 @@
     <!-- Page Content -->
 
 	<a  name="services"></a>
-    <div class="content-section-a">
+    <div class="description4">
 
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-5 col-sm-6">
-                    <hr class="section-heading-spacer">
+        <div class="container3">
+<nav class="char-nav2 grey-border">
+<div class="w3-content w3-section slideshow" style="max-width:500px" >
+  <img class="mySlides" src="/static/img/kleeb-dress.JPG" style="width:100%">
+  <img class="mySlides" src="/static/img/jouvert.JPG" style="width:100%">
+  <img class="mySlides" src="static/img/beach.png" style="width:100%">
+  <img class="mySlides" src="static/img/fancy.JPG" style="width:100%">
+  <img class="mySlides" src="static/img/nye2.JPG" style="width:100%">
+  <img class="mySlides" src="static/img/wedding.JPG" style="width:100%">
+  <img class="mySlides" src="static/img/seal.JPG" style="width:100%">
+  <img class="mySlides" src="static/img/roof.JPG" style="width:100%">
+  <img class="mySlides" src="static/img/beard.JPG" style="width:100%">
+</div>
+</nav>
+            
+                
+                    
                     <div class="clearfix"></div>
-                    <h2 class="section-heading">Our Story (According to Mark)</h2>
-                    <p class="lead">Back in 2010, I was working the door at Death By Audio, checking IDs. Steph came in and declared "I don't pay admission here!" I narrowed my eyes skeptically and said "I've never seen you before and I live here." I kicked her to the curb - but she was persistent. She eventually decided to just hang out with me at the door and I sweet talked her into a bike ride the following week. Before we knew it, we were sharing a prison cell in North Carolina and the rest is history. </p>
+                    <h2 class="section-heading">Our Story</h2>
+                    <div class="row">
+                        <div class="col-sm-5 col-lg-offset-1">
+                    <p class="lead">
+                        According To Mark:
+                        <br>
+                        <br>
+                        Back in 2010, I was working the door at Death By Audio, checking IDs. Steph came in and declared "I don't pay admission here!" I narrowed my eyes skeptically and said "I've never seen you before and I live here." I kicked her to the curb - but she was persistent. She eventually decided to just hang out with me at the door and I sweet talked her into a bike ride the following week. Before we knew it, we were sharing a prison cell in North Carolina and the rest is history. </p>
                 </div>
-                <div class="col-lg-5 col-lg-offset-2 col-sm-6">
-                    <img class="img-responsive" src="static/img/kleeb-dress.JPG" alt="">
+                <div class="col-lg-5">
+                    <p class="lead">
+                        According to Steph:
+                        <br>
+                        <br>I biked over to see a few bands one evening in August 2010. It had been some time since I had been to the space. When I went to the door I found Mark who I did not know working. He was wearing a soft cast on his foot. I told him my name and how I was involved in the space. He immediately started asking me many questions and what I thought might be flirting (?). Mark invited me to go on a bike ride the next day. I asked, "how do you plan to bike with the cast?" He said, "Oh this thing? No big deal." Although I did not attend the bike ride we exchanged numbers and after a few failed attempts to get together I finally went over for drinks and to play on the cargo-net. A few months later after a delicious fancy sushi dinner Kleeb said to me, "So you know, I am not in the singles club anymore." Although I made him clarifying this it was that night we became an official couple and shortly after A power couple.</p>
                 </div>
             </div>
 
@@ -149,14 +171,10 @@
 
             <div class="row">
                 <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
-                    <hr class="section-heading-spacer">
-                    <div class="clearfix"></div>
-                    <h2 class="section-heading">Our Story (According to Steph)</h2>
-                    <p class="lead">I biked over to see a few bands one evening in August 2010. It had been some time since I had been to the space. When I went to the door I found Mark who I did not know working. He was wearing a soft cast on his foot. I told him my name and how I was involved in the space. He immediately started asking me many questions and what I thought might be flirting (?). Mark invited me to go on a bike ride the next day. I asked, "how do you plan to bike with the cast?" He said, "Oh this thing? No big deal." Although I did not attend the bike ride we exchanged numbers and after a few failed attempts to get together I finally went over for drinks and to play on the cargo-net. A few months later after a delicious fancy sushi dinner Kleeb said to me, "So you know, I am not in the singles club anymore." Although I made him clarifying this it was that night we became an official couple and shortly after A power couple.
+                   
+                    
                 </div>
-                <div class="col-lg-5 col-sm-pull-6  col-sm-6">
-                    <img class="img-responsive" src="static/img/jouvert.JPG" alt="">
-                </div>
+                
             </div>
 
         </div>
@@ -244,6 +262,24 @@
 
    <!-- Bootstrap Core JavaScript -->
     <script src="{{ url_for('static', filename='js/bootstrap.min.js')}}"></script>
+
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>
 
 </body>
 

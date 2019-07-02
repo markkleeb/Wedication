@@ -268,12 +268,15 @@ padding: 0px;
 
 .char-nav2 {
     position: relative;
-    width: 360px;
+    width: 510px;
     flex-grow: 0;
     flex-shrink: 0;
 }
 
+.slideshow{
 
+margin:0px auto;
+}
 .section-nav-btn {
     width: 150px;
     margin-top: 10px;
