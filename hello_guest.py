@@ -33,6 +33,9 @@ def returnFood():
 @app.route("/contact", methods=['GET', 'POST'])
 def returnContact():
     return render_template('contact.html')
+@app.route("/comrades", methods=['GET', 'POST'])
+def returnComrades():
+    return render_template('comrades.html')
 @app.route("/gifts", methods=['GET', 'POST'])
 def returnGifts():
     return render_template('gifts.html')

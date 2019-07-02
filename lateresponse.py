@@ -22,7 +22,7 @@ AUTH_TOKEN = os.environ['TWILIO_AUTH_TOKEN']
 
 client = Client(ACCOUNT_SID, AUTH_TOKEN) 
      
-for num in range(228,230):  #to iterate between guests, amend this based on your total
+for num in range(174,175):  #to iterate between guests, amend this based on your total
     print("sleeping for 2 seconds")
     time.sleep(2) #adding a delay to avoid filtering
     
@@ -39,8 +39,9 @@ for num in range(228,230):  #to iterate between guests, amend this based on your
         client.messages.create(
             to="+1" + guest_number, 
             from_="+1 9292544392", #your twilio number here
-            body= u"\u2709" +" Save The Date! "+ u"\u2709" +"\n\n" +u"\u2764" + u"\u2728" + u"\U0001f63b"  + u"\U0001F389" + u"\U0001F37E" + u"\U0001F525" + u"\U0001F63D"+ u"\u2764" + "\n\nThe Marvelous Marriage of Stephanie Gross and Mark Kleback\n\nSaturday November 23rd 2019. \n\nSenate Garage,\nKingston NY\n\nThe Ceremony begins in the late afternoon. We'll send more details in the coming weeks!\n\nPlease text YES if you are saving the date and can join us or text NO if sadly, you won't be able to be with us.\n\nNo babies or kids. This event is 21+ unless you received this text "u"\U0001f618" + "\n" + u"\u2764" + u"\u2728" + u"\U0001f63b"  + u"\U0001F389" + u"\U0001F37E" + u"\U0001F525" + u"\U0001F63D"+ u"\u2764",  
-            #  body ="Hello you lovely people, tomorrow is the big day!!\n\nPost code for the venue: CM6 1RQ\n\nArrival time one thirty for a two o'clock ceremony.\n\nIt is a cash bar, so please bring sufficient money with you as there is no nearby cash machine.\n\nIt might be raining at some point in the day, so an umbrella might be required.\n\nThe venue is non smoking, due to the thatched buildings.\n\nWe could not be more excited that you are joining us for our special day and looking forward to sharing great food and good times!\n\nTom & Lauren",
+            #body= "Save The Date! "+"\n\n" +u"\u2764" + u"\u2728" + u"\U0001f63b"  + u"\U0001F389" + u"\U0001F37E" + u"\U0001F525" + u"\U0001F63D"+ u"\u2764" + "\n\nThe Marvelous Marriage of Stephanie Gross and Mark Kleback\n\nSaturday November 23rd 2019. \n\nSenate Garage,\nKingston NY\n\nThe Ceremony begins in the late afternoon. We'll send more details in the coming weeks!\n\nPlease text YES if you are saving the date and can join us or text NO if sadly, you won't be able to be with us.\n\nNo babies or kids. This event is 21+ unless you received this text "u"\U0001f618" + "\n" + u"\u2764" + u"\u2728" + u"\U0001f63b"  + u"\U0001F389" + u"\U0001F37E" + u"\U0001F525" + u"\U0001F63D"+ u"\u2764",  
+            body = u"\u2665" + "Thanks! We can't wait to see you. More information will be on the way soon! " + u"\u2665",
+            #body ="Yikes! All this wedding talk caused me to blow my circuits! Sorry for the delayed response, but we're so happy you're able to join us for our big day! More information will be on the way soon!" + u"\u2764",
         )
         wks_attendees.update_acell('E'+str(num), int(wks_attendees.acell('E' +str(num)).value) + 1) #increment the message count row
 else:                  # else part of the loop

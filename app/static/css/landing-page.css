@@ -17,7 +17,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
+    /*font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;*/
     font-weight: 700;
 }
 
@@ -77,7 +77,7 @@ h6 {
      /* background: url(https://media.giphy.com/media/K0k6Oxh8whEFW/giphy.gif) no-repeat center center;
    background: url(../img/banner-bg2.png) no-repeat center center;*/
    /* background: url(https://media.giphy.com/media/LVBH3rg1BUROw/giphy.gif) no-repeat center center; */
-   background: url(../img/13015070_10156849630745425_659042390_n.jpg) no-repeat center center;
+   background: url(../img/comrades-cropped.png) no-repeat center center;
    
     background-size: cover;
 }
@@ -159,6 +159,15 @@ h6 {
 
 .section-heading {
     margin-bottom: 30px;
+}
+
+.section-heading-retro {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+.retro{
+    font-family: "Comic Sans MS", cursive, sans-serif;;
+
 }
 
 .section-heading-spacer {
