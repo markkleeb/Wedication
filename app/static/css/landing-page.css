@@ -37,7 +37,7 @@ h4,
 h5,
 h6 {
     /*font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;*/
-    font-family:"Comic Sans MS", cursive, sans-serif;
+    font-family:"Times New Roman", cursive, sans-serif;
     font-weight: 700;
 }
 
@@ -83,9 +83,9 @@ h6 {
      /* background: url(https://media.giphy.com/media/K0k6Oxh8whEFW/giphy.gif) no-repeat center center;
    background: url(../img/banner-bg2.png) no-repeat center center;*/
    /* background: url(https://media.giphy.com/media/LVBH3rg1BUROw/giphy.gif) no-repeat center center; */
-   background: url(../img/tokyo.jpg) no-repeat center center;
+   background: url(../img/ocean1.jpg) center center;
    
-    background-size: cover;
+    background-repeat: repeat-x repeat-y;
 }
 
 
@@ -108,7 +108,7 @@ h6 {
     padding-bottom: 50px;
     text-align: center;
     color: #f8f8f8;
-     background: url(../img/senate-garage.jpg) no-repeat center center;
+     background: url(../img/copper.jpg) no-repeat center center;
     background-size: cover;
 }
 
@@ -149,9 +149,9 @@ h6 {
 }
 
 p {
-    width:40%;
+    width:50%;
     display:inline-block;
-    margin: 20px;
+    margin: 10px auto;
 }
 
 .comrade{
@@ -191,6 +191,12 @@ h2{
     .intro-divider {
         width: 100%;
     }
+}
+
+.name{
+
+    width: 50%;
+    margin: 10px auto;
 }
 
 .network-name {
@@ -261,17 +267,19 @@ padding: 0px;
 
 .char-nav {
     position: relative;
-    width: 310px;
+    width: 30%;
     flex-grow: 0;
     flex-shrink: 0;
 }
 
 .char-nav2 {
     position: relative;
-    width: 510px;
+    width: 75%;
     flex-grow: 0;
     flex-shrink: 0;
 }
+
+
 
 .slideshow{
 
@@ -315,7 +323,8 @@ a .label {
 .banner{
     padding: 100px 0;
     color: #f8f8f8;
-    background: url(../img/img61.jpg) no-repeat center center; 
+    background-color: #101010;  
+    text-align: center;
     background-size: cover;
 }
 
@@ -384,6 +393,7 @@ a .label {
 footer {
     padding: 50px 0;
     background-color: #f8f8f8;
+    color: #000000f;
 }
 
 p.copyright {
