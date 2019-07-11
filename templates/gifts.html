@@ -99,19 +99,19 @@
                          <div class="row">
 
                         <nav class="section-nav">
-                           <a class="section-nav-btn" href="/comrades"> <div class="label">Comrades</div></a>
+                           <a class="section-nav-btn" href="/"> <div class="label">Home</div></a>
                             </nav>
                 
                             <nav class="section-nav">
-                           <a class="section-nav-btn" href="/food"> <div class="label">Food</div></a>
+                           <a class="section-nav-btn" href="/venue"> <div class="label">Venue</div></a>
                             </nav>
                         </div>
                         <div class="row">
                                 <nav class="section-nav">
-                           <a class="section-nav-btn" href="/venue"> <div class="label">Venue</div></a>
+                           <a class="section-nav-btn" href="/comrades"> <div class="label">Comrades</div></a>
                             </nav>
                                 <nav class="section-nav">
-                           <a class="section-nav-btn" href="/"> <div class="label">Home</div></a>
+                           <a class="section-nav-btn" href="/faq"> <div class="label">FAQ</div></a>
                             </nav>
                              </div>
                             
@@ -128,17 +128,12 @@
     <div class="description4">
 
         <div class="container3">
-            <div class="row">
-                <div class="col-lg-5 col-sm-6">
-                    <hr class="section-heading-spacer">
-                    <div class="clearfix"></div>
+            
                     <h2 class="section-heading">Gifts</h2>
                     <p class="lead">Mark and Steph have been living together for five years and they have a really small apartment. Like, tiny. So they'd appreciate if you don't buy them more material things that they have to figure out how to store. Instead, help them to fund their honeymoon to Tokyo that they've dreamed about for years. Check out the <a href="https://www.honeyfund.com/wedding/greebwedding">Honeyfund</a> for more details!</p>
-                </div>
-                <div class="col-lg-5 col-lg-offset-2 col-sm-6">
-                    <img class="img-responsive" src="static/img/ghibli.jpg" alt="">
-                </div>
-            </div>
+                <br>
+                    <img src="static/img/ghibli.jpg" alt="">
+           
 
         </div>
         <!-- /.container -->
@@ -182,11 +177,11 @@
                         </li>
                         <li class="footer-menu-divider">&sdot;</li>
                         <li>
-                            <a href="/food">Food</a>
+                            <a href="/comrades">Comrades</a>
                         </li>
                         <li class="footer-menu-divider">&sdot;</li>
                         <li>
-                            <a href="/comrades">Comrades</a>
+                            <a href="/faq">FAQ</a>
                         </li>
                     
                     
@@ -204,6 +199,23 @@
 
    <!-- Bootstrap Core JavaScript -->
     <script src="{{ url_for('static', filename='js/bootstrap.min.js')}}"></script>
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>
 
 </body>
 
