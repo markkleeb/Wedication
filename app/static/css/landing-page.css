@@ -158,8 +158,8 @@ h6 {
    background: url(../img/banner-bg2.png) no-repeat center center;*/
    /* background: url(https://media.giphy.com/media/LVBH3rg1BUROw/giphy.gif) no-repeat center center; */
    background: url(../img/stars1.gif) center center;
-   background-repeat: repeat-y;
-    background-size: cover;
+   background-repeat: repeat-y repeat-x;
+    
 }
 
 p {
