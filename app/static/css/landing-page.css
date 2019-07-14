@@ -416,11 +416,21 @@ a .label {
     }
 }
 
+.large{
+font-size: 1.5em;
+text-decoration: none;
+font-family: "Helvetica";
+}
+
 
 .story{
 
     float: left;
     display:block;
+}
+
+.stories{
+    width:;
 }
 
 footer {
