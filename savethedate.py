@@ -22,7 +22,7 @@ AUTH_TOKEN = os.environ['TWILIO_AUTH_TOKEN']
 
 client = Client(ACCOUNT_SID, AUTH_TOKEN) 
      
-for num in range(216,233):  #to iterate between guests, amend this based on your total
+for num in range(193,216):  #to iterate between guests, amend this based on your total
     print("sleeping for 2 seconds")
     time.sleep(2) #adding a delay to avoid filtering
     
@@ -39,7 +39,7 @@ for num in range(216,233):  #to iterate between guests, amend this based on your
         client.messages.create(
             to="+1" + guest_number, 
             from_="+1 9292544392", #your twilio number here
-            body= "RSVP with a Yes or No!" + "\n\n" + "If you are receiving this text it means we haven't heard from you yet!" + "\n\n" + u"\u2709" +" Save The Date! "+ u"\u2709" +"\n\n" +u"\u2764" + u"\u2728" + u"\U0001f63b"  + u"\U0001F389" + u"\U0001F37E" + u"\U0001F525" + u"\U0001F63D"+ u"\u2764" + "\n\nThe Marvelous Marriage of Stephanie Gross and Mark Kleback\n\nSaturday November 23rd 2019. \n\nSenate Garage,\nKingston NY\n\nThe Ceremony begins in the late afternoon. We'll send more details very soon!\n\nPlease text YES if you are saving the date and can join us or text NO if sadly, you won't be able to be with us.\n\nNo babies or kids. This event is 21+  "u"\U0001f618" + "\n" + u"\u2764" + u"\u2728" + u"\U0001f63b"  + u"\U0001F389" + u"\U0001F37E" + u"\U0001F525" + u"\U0001F63D"+ u"\u2764",  
+            body= "Hey Party People!" + "\n\n" + u"\u2764" + u"\U0001F389" + u"\U0001F37E"  + "\n\nHere is some information about Stephanie and Mark's wedding: venue, directions, registry etc! Check out http://greeb.wedding and book your accommodations! We've been working on the website for some time so we hope you enjoy it! Also instead of replying (remember, I'm a dumb robot) please email greebwedding@gmail.com for questions or comments!\n" + u"\U0001f63b" + u"\U0001F525" + u"\U0001F63D",  
             #  body ="Hello you lovely people, tomorrow is the big day!!\n\nPost code for the venue: CM6 1RQ\n\nArrival time one thirty for a two o'clock ceremony.\n\nIt is a cash bar, so please bring sufficient money with you as there is no nearby cash machine.\n\nIt might be raining at some point in the day, so an umbrella might be required.\n\nThe venue is non smoking, due to the thatched buildings.\n\nWe could not be more excited that you are joining us for our special day and looking forward to sharing great food and good times!\n\nTom & Lauren",
         )
         wks_attendees.update_acell('E'+str(num), int(wks_attendees.acell('E' +str(num)).value) + 1) #increment the message count row
