@@ -100,8 +100,6 @@ def hello_guest():
     
     if "yes" in from_body.lower(): 
         #We have a keeper! Find the attendee and update their confirmation_status
-        wks_attendees.update_acell("F" + str(guest_confirmation_cell.row), 'Accepted') #update the status to accepted for that guest
-        wks_attendees.update_acell("C261", wks_attendees.acell("A" + str(guest_confirmation_cell.row)).value)
         client.messages.create(
             to="+1" + from_number, 
             from_="+1 9292544392", #your twilio number here
@@ -110,13 +108,14 @@ def hello_guest():
             #body = "Sorry to hear that, we still love you!",
             #body ="Yikes! All this wedding talk caused me to blow my circuits! Sorry for the delayed response, but we're so happy you're able to join us for our big day! More information will be on the way soon!" + u"\u2764",
         )
+        wks_attendees.update_acell("F" + str(guest_confirmation_cell.row), 'Accepted') #update the status to accepted for that guest
+        wks_attendees.update_acell("C261", wks_attendees.acell("A" + str(guest_confirmation_cell.row)).value)
         #resp.message(u"\u2665" + "Thanks! We can't wait to see you. More information will be on the way soon! " + u"\u2665")  #respond to the guest with a confirmation! 
         #resp.message("Thanks! We can't wait to see you. More information will be on the way soon!")  #respond to the guest with a confirmation! 
 
     elif "no" in from_body.lower(): #no! 
        #update the confirmation_status row to declined for that guest
-        wks_attendees.update_acell("F" + str(guest_confirmation_cell.row), 'Declined')  
-        wks_attendees.update_acell("C261", wks_attendees.acell("A" + str(guest_confirmation_cell.row)).value)
+        
         client.messages.create(
             to="+1" + from_number, 
             from_="+1 9292544392", #your twilio number here
@@ -125,13 +124,26 @@ def hello_guest():
             #body = "Sorry to hear that, we still love you!",
             #body ="Yikes! All this wedding talk caused me to blow my circuits! Sorry for the delayed response, but we're so happy you're able to join us for our big day! More information will be on the way soon!" + u"\u2764",
         )
+        wks_attendees.update_acell("F" + str(guest_confirmation_cell.row), 'Declined')  
+        wks_attendees.update_acell("C261", wks_attendees.acell("A" + str(guest_confirmation_cell.row)).value)
 
-        resp.message("Sorry to hear that, we still love you!") #respond to the user confirming the action 
+        #resp.message("Sorry to hear that, we still love you!") #respond to the user confirming the action 
     
     elif "numbers" in from_body.lower(): #return statistics (total guests, food choices list)   
-        resp.message("R.S.V.P update:\n\nTotal Accepted: " + guest_confirmed +
+        
+        client.messages.create(
+            to="+1" + from_number, 
+            from_="+1 9292544392", #your twilio number here
+            #body= "Save The Date! "+"\n\n" +u"\u2764" + u"\u2728" + u"\U0001f63b"  + u"\U0001F389" + u"\U0001F37E" + u"\U0001F525" + u"\U0001F63D"+ u"\u2764" + "\n\nThe Marvelous Marriage of Stephanie Gross and Mark Kleback\n\nSaturday November 23rd 2019. \n\nSenate Garage,\nKingston NY\n\nThe Ceremony begins in the late afternoon. We'll send more details in the coming weeks!\n\nPlease text YES if you are saving the date and can join us or text NO if sadly, you won't be able to be with us.\n\nNo babies or kids. This event is 21+ unless you received this text "u"\U0001f618" + "\n" + u"\u2764" + u"\u2728" + u"\U0001f63b"  + u"\U0001F389" + u"\U0001F37E" + u"\U0001F525" + u"\U0001F63D"+ u"\u2764",  
+            body = "R.S.V.P update:\n\nTotal Accepted: " + guest_confirmed +
          "\n\nTotal declined: " + guest_unconfirmed + "\n\nTotal no response: " +
-        guest_no_response + "\n\nTotal acceptance rate: " + guest_acceptance) 
+        guest_no_response + "\n\nTotal acceptance rate: " + guest_acceptance,
+            #body = "Sorry to hear that, we still love you!",
+            #body ="Yikes! All this wedding talk caused me to blow my circuits! Sorry for the delayed response, but we're so happy you're able to join us for our big day! More information will be on the way soon!" + u"\u2764",
+        )
+        #resp.message("R.S.V.P update:\n\nTotal Accepted: " + guest_confirmed +
+         #"\n\nTotal declined: " + guest_unconfirmed + "\n\nTotal no response: " +
+        #guest_no_response + "\n\nTotal acceptance rate: " + guest_acceptance) 
 
     elif "food" in body_strip.strip():   #respond with the current food totals and the meal choices  
 
@@ -147,9 +159,19 @@ def hello_guest():
         + ": " + dessert_option_2_amount)
 
     else: #respond with invalid keyword
-        resp.message("I am Steph and Mark's wedding robot, and do not understand what you said. We need a YES or a NO, you sent: " +
-        from_body)
-    return str(resp)
+        
+        client.messages.create(
+            to="+1" + from_number, 
+            from_="+1 9292544392", #your twilio number here
+            #body= "Save The Date! "+"\n\n" +u"\u2764" + u"\u2728" + u"\U0001f63b"  + u"\U0001F389" + u"\U0001F37E" + u"\U0001F525" + u"\U0001F63D"+ u"\u2764" + "\n\nThe Marvelous Marriage of Stephanie Gross and Mark Kleback\n\nSaturday November 23rd 2019. \n\nSenate Garage,\nKingston NY\n\nThe Ceremony begins in the late afternoon. We'll send more details in the coming weeks!\n\nPlease text YES if you are saving the date and can join us or text NO if sadly, you won't be able to be with us.\n\nNo babies or kids. This event is 21+ unless you received this text "u"\U0001f618" + "\n" + u"\u2764" + u"\u2728" + u"\U0001f63b"  + u"\U0001F389" + u"\U0001F37E" + u"\U0001F525" + u"\U0001F63D"+ u"\u2764",  
+            body = "I am Steph and Mark's wedding robot, and do not understand what you said. We need a YES or a NO, you sent: " +
+        from_body,
+            #body = "Sorry to hear that, we still love you!",
+            #body ="Yikes! All this wedding talk caused me to blow my circuits! Sorry for the delayed response, but we're so happy you're able to join us for our big day! More information will be on the way soon!" + u"\u2764",
+        )
+        #resp.message("I am Steph and Mark's wedding robot, and do not understand what you said. We need a YES or a NO, you sent: " +
+        #from_body)
+    #return str(resp)
  
 if __name__ == "__main__":
     app.run(debug=True)
