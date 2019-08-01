@@ -20,7 +20,7 @@ credentials = ServiceAccountCredentials.from_json_keyfile_name('client_secret.js
 gc = gspread.authorize(credentials)
 wks = gc.open("GREEBLIST") #add your workbook name here
 wks_attendees = wks.get_worksheet(0) #attendees worksheet
-wks_food = wks.get_worksheet(1) #food responses worksheet
+#wks_food = wks.get_worksheet(1) #food responses worksheet
 
 ACCOUNT_SID = os.environ['TWILIO_ACCOUNT_SID']
 AUTH_TOKEN = os.environ['TWILIO_AUTH_TOKEN']
