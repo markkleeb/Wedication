@@ -67,10 +67,10 @@ def hello_guest():
     #all of these values depend on how many guests are at your wedding
 
     #attendance variables
-    guest_confirmed = wks_attendees.acell('C257').value
-    guest_unconfirmed = wks_attendees.acell('C258').value
-    guest_no_response = wks_attendees.acell('C259').value
-    guest_acceptance = wks_attendees.acell('C260').value
+    guest_confirmed = wks_attendees.acell('C260').value
+    guest_unconfirmed = wks_attendees.acell('C261').value
+    guest_no_response = wks_attendees.acell('C262').value
+    guest_acceptance = wks_attendees.acell('C263').value
     
     #meal total variables
     #guest_meals_confirmed = wks_attendees.acell('C261').value 
@@ -114,7 +114,7 @@ def hello_guest():
             #body ="Yikes! All this wedding talk caused me to blow my circuits! Sorry for the delayed response, but we're so happy you're able to join us for our big day! More information will be on the way soon!" + u"\u2764",
         )
         wks_attendees.update_acell("F" + str(guest_confirmation_cell.row), 'Accepted') #update the status to accepted for that guest
-        wks_attendees.update_acell("C261", wks_attendees.acell("A" + str(guest_confirmation_cell.row)).value)
+        wks_attendees.update_acell("C264", wks_attendees.acell("A" + str(guest_confirmation_cell.row)).value)
         #resp.message(u"\u2665" + "Thanks! We can't wait to see you. More information will be on the way soon! " + u"\u2665")  #respond to the guest with a confirmation! 
         #resp.message("Thanks! We can't wait to see you. More information will be on the way soon!")  #respond to the guest with a confirmation! 
 
