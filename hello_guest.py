@@ -169,8 +169,7 @@ def hello_guest():
             to=from_number, 
             from_="+1 9292544392", #your twilio number here
             #body= "Save The Date! "+"\n\n" +u"\u2764" + u"\u2728" + u"\U0001f63b"  + u"\U0001F389" + u"\U0001F37E" + u"\U0001F525" + u"\U0001F63D"+ u"\u2764" + "\n\nThe Marvelous Marriage of Stephanie Gross and Mark Kleback\n\nSaturday November 23rd 2019. \n\nSenate Garage,\nKingston NY\n\nThe Ceremony begins in the late afternoon. We'll send more details in the coming weeks!\n\nPlease text YES if you are saving the date and can join us or text NO if sadly, you won't be able to be with us.\n\nNo babies or kids. This event is 21+ unless you received this text "u"\U0001f618" + "\n" + u"\u2764" + u"\u2728" + u"\U0001f63b"  + u"\U0001F389" + u"\U0001F37E" + u"\U0001F525" + u"\U0001F63D"+ u"\u2764",  
-            body = "Yikes! I don't know what that means! Maybe you should email the humans greebwedding@gmail.com this text: " +
-        from_body,
+            body = "Yikes! I don't know what that means! If you can't fill out the dinner form you can email the couple at greebwedding@gmail.com",
             #body = "Sorry to hear that, we still love you!",
             #body ="Yikes! All this wedding talk caused me to blow my circuits! Sorry for the delayed response, but we're so happy you're able to join us for our big day! More information will be on the way soon!" + u"\u2764",
         )
