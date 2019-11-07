@@ -22,7 +22,7 @@ AUTH_TOKEN = os.environ['TWILIO_AUTH_TOKEN']
 
 client = Client(ACCOUNT_SID, AUTH_TOKEN) 
      
-for num in range(212,213):  #to iterate between guests, amend this based on your total
+for num in range(210,211):  #to iterate between guests, amend this based on your total
     print("sleeping for 2 seconds")
     time.sleep(2) #adding a delay to avoid filtering
     

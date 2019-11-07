@@ -67,10 +67,10 @@ def hello_guest():
     #all of these values depend on how many guests are at your wedding
 
     #attendance variables
-    guest_confirmed = wks_attendees.acell('C266').value
-    guest_unconfirmed = wks_attendees.acell('C267').value
-    guest_no_response = wks_attendees.acell('C268').value
-    guest_acceptance = wks_attendees.acell('C269').value
+    guest_confirmed = wks_attendees.acell('C269').value
+    guest_unconfirmed = wks_attendees.acell('C270').value
+    guest_no_response = wks_attendees.acell('C271').value
+    guest_acceptance = wks_attendees.acell('C272').value
     
     #meal total variables
     #guest_meals_confirmed = wks_attendees.acell('C261').value 
@@ -114,7 +114,7 @@ def hello_guest():
             #body ="Yikes! All this wedding talk caused me to blow my circuits! Sorry for the delayed response, but we're so happy you're able to join us for our big day! More information will be on the way soon!" + u"\u2764",
         )
         wks_attendees.update_acell("F" + str(guest_confirmation_cell.row), 'Accepted') #update the status to accepted for that guest
-        wks_attendees.update_acell("C270", wks_attendees.acell("A" + str(guest_confirmation_cell.row)).value)
+        wks_attendees.update_acell("C273", wks_attendees.acell("A" + str(guest_confirmation_cell.row)).value)
         #resp.message(u"\u2665" + "Thanks! We can't wait to see you. More information will be on the way soon! " + u"\u2665")  #respond to the guest with a confirmation! 
         #resp.message("Thanks! We can't wait to see you. More information will be on the way soon!")  #respond to the guest with a confirmation! 
 
@@ -130,7 +130,7 @@ def hello_guest():
             #body ="Yikes! All this wedding talk caused me to blow my circuits! Sorry for the delayed response, but we're so happy you're able to join us for our big day! More information will be on the way soon!" + u"\u2764",
         )
         wks_attendees.update_acell("F" + str(guest_confirmation_cell.row), 'Declined')  
-        wks_attendees.update_acell("C270", wks_attendees.acell("A" + str(guest_confirmation_cell.row)).value)
+        wks_attendees.update_acell("C273", wks_attendees.acell("A" + str(guest_confirmation_cell.row)).value)
 
         #resp.message("Sorry to hear that, we still love you!") #respond to the user confirming the action 
     
@@ -169,7 +169,7 @@ def hello_guest():
             to=from_number, 
             from_="+1 9292544392", #your twilio number here
             #body= "Save The Date! "+"\n\n" +u"\u2764" + u"\u2728" + u"\U0001f63b"  + u"\U0001F389" + u"\U0001F37E" + u"\U0001F525" + u"\U0001F63D"+ u"\u2764" + "\n\nThe Marvelous Marriage of Stephanie Gross and Mark Kleback\n\nSaturday November 23rd 2019. \n\nSenate Garage,\nKingston NY\n\nThe Ceremony begins in the late afternoon. We'll send more details in the coming weeks!\n\nPlease text YES if you are saving the date and can join us or text NO if sadly, you won't be able to be with us.\n\nNo babies or kids. This event is 21+ unless you received this text "u"\U0001f618" + "\n" + u"\u2764" + u"\u2728" + u"\U0001f63b"  + u"\U0001F389" + u"\U0001F37E" + u"\U0001F525" + u"\U0001F63D"+ u"\u2764",  
-            body = "I am Steph and Mark's wedding robot, and do not understand what you said. We need a YES or a NO, you sent: " +
+            body = "Yikes! I don't know what that means! Maybe you should email the humans greebwedding@gmail.com this text: " +
         from_body,
             #body = "Sorry to hear that, we still love you!",
             #body ="Yikes! All this wedding talk caused me to blow my circuits! Sorry for the delayed response, but we're so happy you're able to join us for our big day! More information will be on the way soon!" + u"\u2764",
