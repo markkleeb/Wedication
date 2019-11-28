@@ -109,7 +109,8 @@ def hello_guest():
             to= from_number, 
             from_="+1 9292544392", #your twilio number here
             #body= "Save The Date! "+"\n\n" +u"\u2764" + u"\u2728" + u"\U0001f63b"  + u"\U0001F389" + u"\U0001F37E" + u"\U0001F525" + u"\U0001F63D"+ u"\u2764" + "\n\nThe Marvelous Marriage of Stephanie Gross and Mark Kleback\n\nSaturday November 23rd 2019. \n\nSenate Garage,\nKingston NY\n\nThe Ceremony begins in the late afternoon. We'll send more details in the coming weeks!\n\nPlease text YES if you are saving the date and can join us or text NO if sadly, you won't be able to be with us.\n\nNo babies or kids. This event is 21+ unless you received this text "u"\U0001f618" + "\n" + u"\u2764" + u"\u2728" + u"\U0001f63b"  + u"\U0001F389" + u"\U0001F37E" + u"\U0001F525" + u"\U0001F63D"+ u"\u2764",  
-            body = u"\u2665" + "Thanks! We can't wait to see you. More information will be on the way soon! " + u"\u2665",
+            body = "Hey the wedding's over! I was asleep! If you need to get in touch with the bride and groom, you can email them at greebwedding@gmail.com. You can also check the website for photo and video updates:\n\nhttp://greeb.wedding\n\n Feel free to keep giving gifts at \n\n https://www.honeyfund.com/wedding/greebwedding\n\n Okay goodbye for real!",
+            #body = u"\u2665" + "Thanks! We can't wait to see you. More information will be on the way soon! " + u"\u2665",
             #body = "Sorry to hear that, we still love you!",
             #body ="Yikes! All this wedding talk caused me to blow my circuits! Sorry for the delayed response, but we're so happy you're able to join us for our big day! More information will be on the way soon!" + u"\u2764",
         )
@@ -125,7 +126,8 @@ def hello_guest():
             to=from_number, 
             from_="+1 9292544392", #your twilio number here
             #body= "Save The Date! "+"\n\n" +u"\u2764" + u"\u2728" + u"\U0001f63b"  + u"\U0001F389" + u"\U0001F37E" + u"\U0001F525" + u"\U0001F63D"+ u"\u2764" + "\n\nThe Marvelous Marriage of Stephanie Gross and Mark Kleback\n\nSaturday November 23rd 2019. \n\nSenate Garage,\nKingston NY\n\nThe Ceremony begins in the late afternoon. We'll send more details in the coming weeks!\n\nPlease text YES if you are saving the date and can join us or text NO if sadly, you won't be able to be with us.\n\nNo babies or kids. This event is 21+ unless you received this text "u"\U0001f618" + "\n" + u"\u2764" + u"\u2728" + u"\U0001f63b"  + u"\U0001F389" + u"\U0001F37E" + u"\U0001F525" + u"\U0001F63D"+ u"\u2764",  
-            body = "Sorry to hear that, we still love you!",
+            body = "Hey the wedding's over! I was asleep! If you need to get in touch with the bride and groom, you can email them at greebwedding@gmail.com. You can also check the website for photo and video updates:\n\nhttp://greeb.wedding\n\n Feel free to keep giving gifts at \n\n https://www.honeyfund.com/wedding/greebwedding\n\n Okay goodbye for real!",
+            #body = "Sorry to hear that, we still love you!",
             #body = "Sorry to hear that, we still love you!",
             #body ="Yikes! All this wedding talk caused me to blow my circuits! Sorry for the delayed response, but we're so happy you're able to join us for our big day! More information will be on the way soon!" + u"\u2764",
         )
@@ -140,7 +142,8 @@ def hello_guest():
             to=from_number, 
             from_="+1 9292544392", #your twilio number here
             #body= "Save The Date! "+"\n\n" +u"\u2764" + u"\u2728" + u"\U0001f63b"  + u"\U0001F389" + u"\U0001F37E" + u"\U0001F525" + u"\U0001F63D"+ u"\u2764" + "\n\nThe Marvelous Marriage of Stephanie Gross and Mark Kleback\n\nSaturday November 23rd 2019. \n\nSenate Garage,\nKingston NY\n\nThe Ceremony begins in the late afternoon. We'll send more details in the coming weeks!\n\nPlease text YES if you are saving the date and can join us or text NO if sadly, you won't be able to be with us.\n\nNo babies or kids. This event is 21+ unless you received this text "u"\U0001f618" + "\n" + u"\u2764" + u"\u2728" + u"\U0001f63b"  + u"\U0001F389" + u"\U0001F37E" + u"\U0001F525" + u"\U0001F63D"+ u"\u2764",  
-            body = "R.S.V.P update:\n\nTotal Accepted: " + guest_confirmed +
+            body = "Hey the wedding's over! I was asleep! If you need to get in touch with the bride and groom, you can email them at greebwedding@gmail.com. You can also check the website for photo and video updates:\n\nhttp://greeb.wedding\n\n Feel free to keep giving gifts at \n\n https://www.honeyfund.com/wedding/greebwedding\n\n Okay goodbye for real!",
+            #body = "R.S.V.P update:\n\nTotal Accepted: " + guest_confirmed +
          "\n\nTotal declined: " + guest_unconfirmed + "\n\nTotal no response: " +
         guest_no_response + "\n\nTotal acceptance rate: " + guest_acceptance,
             #body = "Sorry to hear that, we still love you!",
@@ -169,7 +172,7 @@ def hello_guest():
             to=from_number, 
             from_="+1 9292544392", #your twilio number here
             #body= "Save The Date! "+"\n\n" +u"\u2764" + u"\u2728" + u"\U0001f63b"  + u"\U0001F389" + u"\U0001F37E" + u"\U0001F525" + u"\U0001F63D"+ u"\u2764" + "\n\nThe Marvelous Marriage of Stephanie Gross and Mark Kleback\n\nSaturday November 23rd 2019. \n\nSenate Garage,\nKingston NY\n\nThe Ceremony begins in the late afternoon. We'll send more details in the coming weeks!\n\nPlease text YES if you are saving the date and can join us or text NO if sadly, you won't be able to be with us.\n\nNo babies or kids. This event is 21+ unless you received this text "u"\U0001f618" + "\n" + u"\u2764" + u"\u2728" + u"\U0001f63b"  + u"\U0001F389" + u"\U0001F37E" + u"\U0001F525" + u"\U0001F63D"+ u"\u2764",  
-            body = "Yikes! I don't know what that means! If you can't fill out the dinner form you can email the couple at greebwedding@gmail.com",
+            body = "Hey the wedding's over! I was asleep! If you need to get in touch with the bride and groom, you can email them at greebwedding@gmail.com. You can also check the website for photo and video updates:\n\nhttp://greeb.wedding\n\n Feel free to keep giving gifts at \n\n https://www.honeyfund.com/wedding/greebwedding\n\n Okay goodbye for real!",
             #body = "Sorry to hear that, we still love you!",
             #body ="Yikes! All this wedding talk caused me to blow my circuits! Sorry for the delayed response, but we're so happy you're able to join us for our big day! More information will be on the way soon!" + u"\u2764",
         )
