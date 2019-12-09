@@ -28,6 +28,9 @@ client = Client(ACCOUNT_SID, AUTH_TOKEN)
 
 @app.route("/", methods=['GET', 'POST'])
 def hello_world():
+    return render_template('thanks.html')
+@app.route("/index", methods=['GET', 'POST'])
+def index():
     return render_template('index.html')
 @app.route("/venue", methods=['GET', 'POST'])
 def returnVenue():
