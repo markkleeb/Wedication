@@ -47,9 +47,9 @@ def returnFaq():
 @app.route("/gifts", methods=['GET', 'POST'])
 def returnGifts():
     return render_template('gifts.html')
-@app.route("/faq", methods=['GET', 'POST'])
-def returnFAQ():
-    return render_template('faq.html')
+@app.route("/thanks", methods=['GET', 'POST'])
+def returnThanks():
+    return render_template('thanks.html')
 @app.errorhandler(500)
 def internal_error(error):
     return "500 error"
