@@ -10,7 +10,7 @@ scope = ['https://spreadsheets.google.com/feeds',
 
 credentials = SignedJwtAssertionCredentials(json_key['client_email'], json_key['private_key'].encode(), scope)
 gc = gspread.authorize(credentials)
-wks = gc.open("") #add your spreadsheet name here
+wks = gc.open("GREEBLIST_TEST") #add your spreadsheet name here
 wks_attendees = wks.get_worksheet(0) #attendees worksheet
 
 ACCOUNT_SID = os.environ['Twilio_account_per']
