@@ -89,4 +89,4 @@ ENV/
 .ropeproject
 
 #Secret Keys
-client_secret.json
+/client_secret.json
